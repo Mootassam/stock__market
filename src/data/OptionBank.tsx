@@ -1,6 +1,3 @@
-const optionBank = [
-  // { name: "Krungthai", value: "Krungthai" },
-  { name: "stock", value: "stock" },
-];
+const optionBank = [{ name: "stock", value: "stock" }];
 
 export default optionBank;

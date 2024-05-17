@@ -12,7 +12,6 @@ function Stock(props) {
 
   // CONST FOR THE TIME
   const [time, setTime] = useState("09:09");
-
   const [limit, setLimit] = useState<any>(12);
 
   // CONST FOR THE HEADER
@@ -132,6 +131,7 @@ function Stock(props) {
 
     return background;
   };
+
   const removeFields = (index) => {
     let formDelete = [...array];
     console.log(formDelete);
@@ -380,13 +380,11 @@ function Stock(props) {
           </div>
           <div className="full__batttery">
             <div className="battery__stock">
-              <div className="level__limit"  style={{ width: `${limit}%`, background: CheckstatusBattery() }}></div>
-              <span
-                className="level__number"
-               
-              >
-                {limit}
-              </span>
+              <div
+                className="level__limit"
+                style={{ width: `${limit}%`, background: CheckstatusBattery() }}
+              ></div>
+              <span className="level__number">{limit}</span>
             </div>
             <div className="bar__"></div>
           </div>
@@ -536,8 +534,20 @@ function Stock(props) {
             <span className="dayspl">Day's P&L</span>
           </div>
           <div className="pl__right">
-            <span className="bigNumber">{first}</span>
-            <span className="smallNumber">{second} %</span>
+            <span
+              className={`bigNumber ${
+                Number.verifyNumber(first) ? "color__red" : ""
+              } `}
+            >
+              {first}
+            </span>
+            <span
+              className={`smallNumber ${
+                Number.verifyNumber(second) ? "color__red" : ""
+              }`}
+            >
+              {second} %
+            </span>
           </div>
         </div>
 

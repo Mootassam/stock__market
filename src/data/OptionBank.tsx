@@ -1,5 +1,5 @@
 const optionBank = [
-  { name: "Krungthai", value: "Krungthai" },
+  // { name: "Krungthai", value: "Krungthai" },
   { name: "stock", value: "stock" },
 ];
 

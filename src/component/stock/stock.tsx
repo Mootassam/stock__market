@@ -13,7 +13,7 @@ function Stock(props) {
   // CONST FOR THE TIME
   const [time, setTime] = useState("09:09");
 
-  const [limit, setLimit] = useState(12);
+  const [limit, setLimit] = useState<any>(12);
 
   // CONST FOR THE HEADER
   const [headerInvested, setHeaderInvested] = useState("200");
